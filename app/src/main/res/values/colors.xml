@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="name_color">#1F1F1F</color>
+    <color name="location_color">#888888</color>
+    <color name="item_checked">#ECF0F5</color>
+    <color name="item_not_checked">#D7E0F5</color>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>

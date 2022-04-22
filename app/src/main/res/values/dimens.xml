@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="name_size">16sp</dimen>
+    <dimen name="location_size">12sp</dimen>
+    <dimen name="norm_margin">8dp</dimen>
+</resources>
