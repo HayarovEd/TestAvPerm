@@ -1,4 +1,4 @@
-package com.edurda77.testavperm.view.adapters
+package com.edurda77.testavperm.view
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.edurda77.testavperm.databinding.ActivityMainBinding
 import com.edurda77.testavperm.model.data.AutoStation
+import com.edurda77.testavperm.view.adapters.AutoStationAdapter
 import com.edurda77.testavperm.viewmodel.MainActivityViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
