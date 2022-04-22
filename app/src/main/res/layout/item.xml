@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/norm_margin"
-    android:background="@{itemObject.isSelected ? @color/item_checked : @color/item_not_checked}"
+
     android:orientation="vertical">
 
     <TextView
@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:textSize="@dimen/name_size"
         android:textColor="@color/name_color"
-        android:fontFamily="@font/MontserratMedium"/>
+        />
     <TextView
         android:id="@+id/item_location"
         android:layout_marginTop="@dimen/norm_margin"
@@ -21,6 +21,6 @@
         android:layout_height="wrap_content"
         android:textSize="@dimen/location_size"
         android:textColor="@color/location_color"
-        android:fontFamily="@font/MontserratMedium"/>
+        />
 
 </LinearLayout>

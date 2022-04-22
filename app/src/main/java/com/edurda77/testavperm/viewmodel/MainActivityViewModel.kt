@@ -7,10 +7,12 @@ import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.observers.DisposableObserver
 import io.reactivex.rxjava3.schedulers.Schedulers
 
-class MainActivityViewModel(private val caseRepoImpl: CaseRepoImpl) :
+class MainActivityViewModel :
     MainActivityViewModelContract.ViewModel() {
     override val liveData: MutableLiveData<List<Autostation>> =
         MutableLiveData<List<Autostation>>()
+
+    private val caseRepoImpl =  CaseRepoImpl()
 
     override fun getLiveData() {
         val loadingData = caseRepoImpl.getData()
@@ -22,12 +24,14 @@ class MainActivityViewModel(private val caseRepoImpl: CaseRepoImpl) :
 
     private fun getObserver(): DisposableObserver<List<Autostation>> {
         return object : DisposableObserver<List<Autostation>>() {
-            override fun onNext(wordTranslate: List<Autostation>) {
-                liveData.postValue(wordTranslate)
+            override fun onNext(autostation: List<Autostation>) {
+                liveData.postValue(autostation)
             }
+
             override fun onError(error: Throwable) {
                 error.message
             }
+
             override fun onComplete() {
             }
         }
