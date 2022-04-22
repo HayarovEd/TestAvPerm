@@ -7,12 +7,12 @@ import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.observers.DisposableObserver
 import io.reactivex.rxjava3.schedulers.Schedulers
 
-class MainActivityViewModel :
+class MainActivityViewModel (private val caseRepoImpl: CaseRepoImpl):
     MainActivityViewModelContract.ViewModel() {
     override val liveData: MutableLiveData<List<Autostation>> =
         MutableLiveData<List<Autostation>>()
 
-    private val caseRepoImpl =  CaseRepoImpl()
+
 
     override fun getLiveData() {
         val loadingData = caseRepoImpl.getData()

@@ -8,13 +8,8 @@ import io.reactivex.rxjava3.core.Observable
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class CaseRepoImpl :CaseRepo {
-    private var retrofit: Retrofit = Retrofit.Builder()
-        .baseUrl(BASE_URL)
-        .addConverterFactory(GsonConverterFactory.create())
-        .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
-        .build()
-    private var api = retrofit.create(ApiService::class.java)
+class CaseRepoImpl(private val api: ApiService) :CaseRepo {
+
     override fun getData(): Observable<List<Autostation>> {
         return api.getAutoStation(TOKEN)
     }
