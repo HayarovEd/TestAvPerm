@@ -3,12 +3,11 @@ package com.edurda77.testavperm.view.adapters
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.edurda77.testavperm.model.data.Autostation
-import com.edurda77.testavperm.model.data.StopPlace
+import com.edurda77.testavperm.model.data.AutoStation
 
 
 class AutoStationAdapter(
-    private val list: List<Autostation>) :
+    private val list: List<AutoStation>) :
     RecyclerView.Adapter<AutoStationHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AutoStationHolder {
@@ -17,8 +16,8 @@ class AutoStationAdapter(
     }
 
     override fun onBindViewHolder(holder: AutoStationHolder, position: Int) {
-        val autostation: Autostation = list[position]
-        holder.bind(autostation)
+        val autoStation: AutoStation = list[position]
+        holder.bind(autoStation)
     }
 
     override fun getItemCount(): Int = list.size

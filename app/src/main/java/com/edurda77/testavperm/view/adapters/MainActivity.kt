@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.edurda77.testavperm.databinding.ActivityMainBinding
-import com.edurda77.testavperm.model.data.Autostation
+import com.edurda77.testavperm.model.data.AutoStation
 import com.edurda77.testavperm.viewmodel.MainActivityViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
-    private fun setOotRecycledView(list: List<Autostation>) {
+    private fun setOotRecycledView(list: List<AutoStation>) {
 
         val recyclerView: RecyclerView = binding.recycledView
         recyclerView.layoutManager = LinearLayoutManager(
